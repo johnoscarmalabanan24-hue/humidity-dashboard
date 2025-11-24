@@ -1,0 +1,262 @@
+[
+    {
+        "id": "33c9ba664b8cc720",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "41062750146b5365",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "104787860023fbd4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "78d5b0eeb6db1f0d",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "41062750146b5365",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "93f38b943a049383",
+        "type": "inject",
+        "z": "33c9ba664b8cc720",
+        "name": "SW",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "a2298d87d85033cf"
+            ]
+        ]
+    },
+    {
+        "id": "0acc07c103308f9f",
+        "type": "ui_text",
+        "z": "33c9ba664b8cc720",
+        "group": "78d5b0eeb6db1f0d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidity Text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 620,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6acb65bb7afde876",
+        "type": "ui_chart",
+        "z": "33c9ba664b8cc720",
+        "name": "",
+        "group": "78d5b0eeb6db1f0d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4315e8e8f0020648",
+        "type": "ui_template",
+        "z": "33c9ba664b8cc720",
+        "group": "78d5b0eeb6db1f0d",
+        "name": "Custom UI",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center;\">\n    <h2>Humidity Status</h2>\n    <div id=\"status-box\">Status: —</div>\n    <div id=\"value-box\">— %</div>\n</div>\n\n<style>\n    h2 {\n        color: #00aaff;\n        font-family: Verdana;\n    }\n\n    #status-box,\n    #value-box {\n        font-size: 20px;\n        margin-top: 10px;\n    }\n</style>\n\n<script>\n    (function(scope) {\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n\n        document.getElementById(\"value-box\").innerText = msg.payload + \" %\";\n\n        let status = (msg.payload < 40) \n            ? \"Dry\" \n            : (msg.payload < 70) \n                ? \"Comfortable\" \n                : \"Humid\";\n\n        document.getElementById(\"status-box\").innerText = \"Status: \" + status;\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 490,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2298d87d85033cf",
+        "type": "function",
+        "z": "33c9ba664b8cc720",
+        "name": "Humidity Status",
+        "func": "function sendHumidity() {\n    // Random humidity 0–100%\n    let h = Math.floor(Math.random() * 101);\n\n    // Humidity status\n    let status =\n        h < 40  ? \"Dry\" :\n        h < 70  ? \"Comfortable\" :\n                  \"Humid\";\n\n    // Output to 2 outputs\n    node.send([\n        { payload: h },\n        { payload: status }\n    ]);\n}\n\n\nsendHumidity();\n\n\nsetTimeout(() => node.receive({}), 5000);\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "0acc07c103308f9f",
+                "6acb65bb7afde876",
+                "4315e8e8f0020648"
+            ]
+        ]
+    }
+]
